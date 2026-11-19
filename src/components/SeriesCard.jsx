@@ -23,3 +23,7 @@ const SeriesCard = ({ title, genre, startYear, creator, ended, nextYear, seasons
 };
 
 export default SeriesCard;
+
+<div class="series-card__actions">
+  <button class="btn">☆ לשמור</button>
+</div>

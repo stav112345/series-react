@@ -1,4 +1,18 @@
-<main class="page">
-  <h2 class="page__title">הסדרות (5)</h2>
-  <!-- כאן SeriesList עם כל הסדרות -->
-</main>
+import Header from "./components/Header";
+import SeriesList from "./components/SeriesList";
+import { platform, series } from "./data/series";
+
+function App() {
+  return (
+    <>
+      <Header platform={platform} count={series.length} />
+
+      <main className="page">
+        <h2 className="page__title">הסדרות ({series.length})</h2>
+        <SeriesList series={series} />
+      </main>
+    </>
+  );
+}
+
+export default App;
