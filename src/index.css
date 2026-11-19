@@ -1,0 +1,219 @@
+/* SeriesHub — סגנונות. לא צריך לשנות את הקובץ הזה. */
+
+:root {
+  --bg: #f4f3ef;
+  --surface: #ffffff;
+  --ink: #2a2c33;
+  --muted: #6c6f78;
+  --border: #e2e0da;
+  --accent: #4f5b86;
+  --accent-soft: #e6e8f1;
+  --green: #4d7a5e;
+  --green-soft: #e3eee6;
+  --gold: #b08a3e;
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Heebo", system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+/* ---------- Header ---------- */
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 20px 32px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.header__logo {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+.header__count {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* ---------- העמוד ---------- */
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+.page__title {
+  margin: 0 0 20px;
+  font-size: 1.25rem;
+}
+
+/* ---------- כפתורים ---------- */
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.btn {
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.btn:hover {
+  border-color: var(--accent);
+}
+
+.btn--active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+}
+
+/* ---------- רשימת הסדרות ---------- */
+
+.series-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+/* ---------- כרטיס סדרה ---------- */
+
+.series-card {
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.series-card--saved {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 2px #b08a3e33;
+}
+
+.series-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.series-card__title {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.series-card__meta {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.series-card__next {
+  margin: 10px 0 0;
+  color: var(--accent);
+  font-size: 0.95rem;
+}
+
+.series-card__actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.badge {
+  flex-shrink: 0;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
+
+.badge--running {
+  background: var(--green-soft);
+  color: var(--green);
+}
+
+.badge--ended {
+  background: var(--accent-soft);
+  color: var(--muted);
+}
+
+/* ---------- עונות ופרקים ---------- */
+
+.season-list {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.season__title {
+  margin: 12px 0 6px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.episode-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.episode {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  border-bottom: 1px dashed var(--border);
+}
+
+.episode__title {
+  flex: 1;
+}
+
+.episode__info {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.episode__rating {
+  color: var(--gold);
+}
+
+.episode__vote {
+  padding: 2px 8px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  font-size: 0.85rem;
+}
+
+.empty {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-style: italic;
+}
