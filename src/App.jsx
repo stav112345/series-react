@@ -1,6 +1,4 @@
-function App() {
-  return<h1>SeriesHub</h1>;
-}
-
-export default App;
-
+<main class="page">
+  <h2 class="page__title">הסדרות (5)</h2>
+  <!-- כאן SeriesList עם כל הסדרות -->
+</main>
