@@ -13,7 +13,7 @@ function SeasonList({ seasons }) {
             <ul className="episode-list">
               {season.episodes.map(episode => (
                 <EpisodeItem
-                  title={episode.title}
+                  title={episode.title} key={episode.title}
                   rating={episode.rating}
                   duration={episode.duration}
                 />
